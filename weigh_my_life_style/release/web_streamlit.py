@@ -4,14 +4,15 @@ import pandas as pd
 import os
 from WLS import *
 
-st.write(os.getcwd())
+#st.write(os.getcwd())
+WORK_PATH = './weigh_my_life_style/release/'
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-df_raw = pd.read_csv('./weigh_my_life_style/release/df_example.csv')
+df_raw = pd.read_csv(WORK_PATH+'df_example.csv')
 model = MLP()
-model.load_state_dict(torch.load('model_released.pth'))
+model.load_state_dict(torch.load(WORK_PATH+'model_released.pth'))
 
 ######
 
