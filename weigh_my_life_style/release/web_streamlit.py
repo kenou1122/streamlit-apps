@@ -6,7 +6,7 @@ from WLS import *
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-df_raw = pd.read_csv('df_example.csv')
+df_raw = pd.read_csv('./df_example.csv')
 model = MLP()
 model.load_state_dict(torch.load('model_released.pth'))
 
